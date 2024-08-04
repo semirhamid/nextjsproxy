@@ -64,7 +64,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      res.status(200).json(data);
+      res.status(200).send(data);
     })
     .catch((error) => {
       res.status(500).json({ error: error.message });
